@@ -11,16 +11,19 @@ export default function Weather(props) {
 
     return (
         <ImageBackground source={require('../img.jpg')} style={styles.backdrop}>
-            <Text>Zip Code</Text>
+            <Text>Zip Code is </Text>
             <Text>{props.zipCode}</Text>
             <Forecast {...forecastInfo} />
         </ImageBackground>
  );
 }
 const styles = StyleSheet.create({
- backdrop: {
- alignItems: 'center',
- width: '100%',
- height: '100%'
- },
+    backdrop: {
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        
+        width: '100%',
+        height: '100%'
+ }, 
 });
